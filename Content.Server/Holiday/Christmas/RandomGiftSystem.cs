@@ -106,6 +106,16 @@ public sealed class RandomGiftSystem : EntitySystem
             component.SelectedEntity = _random.Pick(_possibleGiftsUnsafe);
         else
             component.SelectedEntity = _random.Pick(_possibleGiftsSafe);
+
+        //If selected item in blacklist, pick again
+        while (component.Blacklist.Contains(component.SelectedEntity))
+        {
+            Console.WriteLine("========= thing found in blacklist =========");
+            if (component.InsaneMode)
+                component.SelectedEntity = _random.Pick(_possibleGiftsUnsafe);
+            else
+                component.SelectedEntity = _random.Pick(_possibleGiftsSafe);
+        }
     }
 
     private void OnPrototypesReloaded(PrototypesReloadedEventArgs obj)

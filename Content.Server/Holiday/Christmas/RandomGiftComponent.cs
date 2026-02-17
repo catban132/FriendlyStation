@@ -6,6 +6,7 @@
 //
 // SPDX-License-Identifier: MIT
 
+using Content.Shared.Storage;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
@@ -48,4 +49,7 @@ public sealed partial class RandomGiftComponent : Component
     /// </summary>
     [DataField("selectedEntity"), ViewVariables(VVAccess.ReadWrite)]
     public string? SelectedEntity;
+
+    [DataField("blacklist", required: false)]
+    public List<string> Blacklist = new();
 }
