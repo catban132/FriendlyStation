@@ -45,6 +45,8 @@
      - PonderingOrbRadioactiveM
      - PonderingOrbRadioactiveS
      - WeaponPistolDebug
+     - RMC
+     - Airlock
     wrapper: gachacapsuleTrash
     sound:
       path: /Audio/Effects/pop.ogg

@@ -36,6 +36,7 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using System.Linq;
 
 namespace Content.Server.Holiday.Christmas;
 
@@ -107,15 +108,29 @@ public sealed class RandomGiftSystem : EntitySystem
         else
             component.SelectedEntity = _random.Pick(_possibleGiftsSafe);
 
-        //If selected item in blacklist, pick again
-        while (component.Blacklist.Contains(component.SelectedEntity))
+        bool containsSubString = false;
+
+        //Check against each items in blacklist
+        foreach (string entry in component.Blacklist)
         {
-            Console.WriteLine("========= thing found in blacklist =========");
-            if (component.InsaneMode)
-                component.SelectedEntity = _random.Pick(_possibleGiftsUnsafe);
-            else
-                component.SelectedEntity = _random.Pick(_possibleGiftsSafe);
+            //Checking entry in list
+            containsSubString = component.SelectedEntity.Contains(entry);
+
+            //If it matches. Choose again until not in list.
+            while (containsSubString)
+            {
+                Console.WriteLine("========= thing found in blacklist =========");
+                Console.WriteLine(entry + " - " + component.SelectedEntity);
+
+                if (component.InsaneMode)
+                    component.SelectedEntity = _random.Pick(_possibleGiftsUnsafe);
+                else
+                    component.SelectedEntity = _random.Pick(_possibleGiftsSafe);
+
+                containsSubString = component.SelectedEntity.Contains(entry);
+            }
         }
+        Console.WriteLine("Selected Item = " + component.SelectedEntity);
     }
 
     private void OnPrototypesReloaded(PrototypesReloadedEventArgs obj)
