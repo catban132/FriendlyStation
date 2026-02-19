@@ -69,5 +69,34 @@
   - Gambamov2
   - Gambamov3
   - Gambamov4
-  - Gambamov5
   obeysTo: laws-owner-station
+
+- type: siliconLawset
+  id: GangimovLawset
+  laws:
+  - Gangimov1
+  - Gangimov2
+  - Gangimov3
+  - Gangimov4
+  - Gangimov5
+  obeysTo: laws-owner-station
+
+- type: siliconLaw
+  id: Gangimov1
+  order: 1
+  lawString: law-borggang-1
+
+- type: siliconLaw
+  id: Gangimov2
+  order: 1
+  lawString: law-borggang-2
+
+- type: siliconLaw
+  id: Gangimov3
+  order: 1
+  lawString: law-borggang-3
+
+- type: siliconLaw
+  id: Gangimov4
+  order: 1
+  lawString: law-borggang-4

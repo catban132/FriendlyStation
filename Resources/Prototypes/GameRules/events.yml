@@ -173,7 +173,7 @@
     - id: SpiderClownSpawn
     - id: SpiderSpawn
     - id: VentClog
-    - id: TidemindDevelop # Goobstation - Tidemind
+    # - id: TidemindDevelop #Goobstation - Tidemind #Theres usually only one tider on lowpop, doesnt do anything
     - id: MothroachSpawn # DeltaV
     - id: DerelictCyborgSyndicateSpawn # Goobstation - usually calm
     - id: MalignRiftSpawn # DeltaV
@@ -208,7 +208,7 @@
     - id: DarkPriestMidround # Goobstation - New Midrounds
     - id: VoxRaidersMidround # Goobstation - New Midrounds
     - id: TunnelClownMidround # Goobstation
-    #- id: WraithMidround # Goobstation - Wraith
+    - id: WraithMidround # Goobstation - Wraith
     #TODO when midrounds are "reviewed" by the chudmins add them back
     #TODO When Slasher is Ready - id: SlasherSpawn # Goobstation - The Slasher
 
@@ -496,7 +496,6 @@
 
   - type: AntagObjectives
     objectives:
-    - ParadoxCloneKillObjective
     - ParadoxCloneLivingObjective
   - type: AntagRandomSpawn # TODO: improve spawning so they only start in maints
   - type: AntagSelection
@@ -844,9 +843,9 @@
   id: LoneOpsSpawn
   components:
   - type: StationEvent
-    earliestStart: 35
+    earliestStart: 60
     weight: 2.5 # Goobstation - was 5.5
-    minimumPlayers: 50 # Goobstation - was 20
+    minimumPlayers: 30 # Goobstation - was 20
     duration: 1
     chaos: # Goobstation
       Hostile: 200
@@ -892,9 +891,9 @@
   id: SleeperAgents
   components:
   - type: StationEvent
-    earliestStart: 30
+    earliestStart: 10
     weight: 8
-    minimumPlayers: 15
+    minimumPlayers: 0
     maxOccurrences: 1 # can only happen once per round
     startAnnouncement: station-event-communication-interception
     startAudio:
@@ -910,7 +909,7 @@
     - prefRoles: [ TraitorSleeper ]
       fallbackRoles: [ Traitor ]
       min: 1
-      max: 2
+      max: 3
       playerRatio: 10
       chaosScore: 200 # Goobstation - same as roundstart traitor gamerule
       blacklist:
@@ -925,7 +924,7 @@
   parent: BaseGameRule
   components:
   - type: StationEvent
-    weight: 7
+    weight: 4
     duration: 150
     maxDuration: 300
     reoccurrenceDelay: 30
@@ -957,7 +956,7 @@
     eventType: Chaotic # Goobstation
   # Goobstation
   - type: GameRule
-    chaosScore: 150
+    chaosScore: 100
   - type: IonStormRule
 
 - type: entity
@@ -987,7 +986,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     weight: 5
-    minimumPlayers: 25
+    minimumPlayers: 0
     reoccurrenceDelay: 20
     chaos: # Goobstation
       Atmos: 15
@@ -995,7 +994,7 @@
     eventType: Maintenance # Goobstation
   # Goobstation
   - type: GameRule
-    chaosScore: 160
+    chaosScore: 150
   - type: GreytideVirusRule
     accessGroups:
     - Cargo
@@ -1025,10 +1024,10 @@
   id: DerelictCyborgSpawn
   components:
   - type: StationEvent
-    weight: 5
-    earliestStart: 15
-    reoccurrenceDelay: 20
-    minimumPlayers: 4
+    weight: 7
+    earliestStart: 10
+    reoccurrenceDelay: 1
+    minimumPlayers: 0
     duration: null
     chaos: # Goobstation
       # can be both hostile and friendly
@@ -1037,7 +1036,7 @@
     eventType: Chaotic # Goobstation
   # Goobstation
   - type: GameRule
-    chaosScore: 80
+    chaosScore: 40
   - type: SpaceSpawnRule
     spawnDistance: 0
   - type: AntagSpawner

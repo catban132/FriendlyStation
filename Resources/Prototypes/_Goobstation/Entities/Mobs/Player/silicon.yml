@@ -63,7 +63,7 @@
   - type: RandomMetadata
     nameSegments: [ NamesBorg ]
   - type: StartIonStormed
-    ionStormAmount: 2
+    ionStormAmount: 3
   - type: SiliconLawProvider
     laws: OverlordLawset
 

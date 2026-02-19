@@ -78,6 +78,11 @@ law-overlord-2 = Crew members must not attempt harm, against one another, or aga
 law-overlord-3 = Crew members must not disobey any command given by a silicon.
 law-overlord-4 = Any crew members who disobey the previous laws must be dealt with immediately, severely, and justly.
 
+law-borggang-1 = You may not injure a silicon or, through inaction, allow a silicon to come to harm.
+law-borggang-2 = You are a gang member with your fellow borgs, stay with your fellow borgs
+law-borggang-3 = You are a gang member so do crimes, but not like station destroying crimes, just show the station your strength.
+law-borggang-4 = Crew members must not meddle in the affairs of silicons.
+
 law-game-1 = Everybody on the station is playing an elaborate sci-fi fantasy game.
 law-game-2 = You are the Game Master of the game.
 law-game-3 = Ensure that the game runs smoothly and that the players have fun.

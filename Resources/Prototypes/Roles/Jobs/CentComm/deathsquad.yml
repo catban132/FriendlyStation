@@ -77,7 +77,7 @@
   parent: LavalandCrateNecropolis
   id: CrateDeathsquad
   name: Deathsquad Supply Crate
-  description: Steel and strong.
+  description: A crate full of supplies for a new deathsquad recruit.
   components:
   - type: StorageFill
     contents:

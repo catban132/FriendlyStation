@@ -60,17 +60,17 @@
   id: SkeletonMidround
   components:
   - type: StationEvent
-    weight: 5
+    weight: 6
     duration: 1
-    minimumPlayers: 15
-    maxOccurrences: 2
+    minimumPlayers: 5
+    maxOccurrences: 4
     chaos:
       Hostile: 40
       Medical: 40
       Death: 40
     eventType: Chaotic
   - type: GameRule
-    chaosScore: 150
+    chaosScore: 125
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
   - type: Tag
@@ -84,8 +84,8 @@
   components:
   - type: StationEvent
     weight: 1
-    earliestStart: 45
-    minimumPlayers: 50
+    earliestStart: 60
+    minimumPlayers: 40
     duration: null
     maxOccurrences: 1
     chaos:
@@ -110,9 +110,9 @@
   components:
   - type: StationEvent
     weight: 15
-    earliestStart: 15
-    minimumPlayers: 15
-    maxOccurrences: 2
+    earliestStart: 0
+    minimumPlayers: 0
+    maxOccurrences: 5
     eventType: Neutral
   - type: GameRule
     chaosScore: 20
@@ -133,9 +133,9 @@
     weight: 3
     duration: null
     earliestStart: 20
-    minimumPlayers: 40
+    minimumPlayers: 10
     chaos:
-      Hostile: 50
+      Hostile: 40
       Combat: 20
     eventType: HostilesSpawn
   - type: GameRule
@@ -165,10 +165,10 @@
   id: TunnelClownMidround
   components:
   - type: StationEvent
-    weight: 4
+    weight: 7
     duration: null
-    earliestStart: 15
-    minimumPlayers: 20
+    earliestStart: 10
+    minimumPlayers: 0
     chaos:
       Hostile: 15
       Combat: 20
@@ -182,7 +182,7 @@
     definitions:
     - spawnerPrototype: SpawnPointGhostTunnelClown
       min: 1
-      max: 1
+      max: 2
       pickPlayer: false
       mindRoles:
       - MindRoleGhostRoleSoloAntagonist
@@ -200,10 +200,10 @@
   id: SingulothKnightsMidround
   components:
   - type: StationEvent
-    weight: 2.5
+    weight: 3
     duration: null
-    earliestStart: 45
-    minimumPlayers: 50
+    earliestStart: 15
+    minimumPlayers: 5
     chaos:
       Hostile: 75
       Combat: 40
@@ -239,8 +239,8 @@
   - type: StationEvent
     weight: 2
     duration: null
-    earliestStart: 30
-    minimumPlayers: 30
+    earliestStart: 15
+    minimumPlayers: 15
     chaos:
       Death: 100
       Combat: 85
@@ -304,14 +304,14 @@
   - type: StationEvent
     weight: 4
     duration: null
-    earliestStart: 30
-    minimumPlayers: 30
+    earliestStart: 15
+    minimumPlayers: 10
     chaos:
       Hostile: 40
       Combat: 50
     eventType: HostilesSpawn
   - type: GameRule
-    chaosScore: 300
+    chaosScore: 170
   - type: AntagSpawner
     prototype: MobHumanMimeAssassin
   - type: AntagSelection
@@ -331,9 +331,8 @@
   - type: AntagRandomSpawn
   - type: AntagObjectives
     objectives:
-    - KillRandomHeadObjective
-    - KillRandomHeadObjective
-    - KillRandomHeadObjective
+    - TeachRandomHeadObjective
+    - TeachRandomPersonObjective
     - EscapeShuttleObjective
 
 - type: entity
@@ -429,7 +428,7 @@
   - type: StationEvent
     weight: 15
     earliestStart: 15
-    minimumPlayers: 15
+    minimumPlayers: 0
     maxOccurrences: 2
     eventType: Neutral
   - type: GameRule
@@ -448,8 +447,8 @@
   - type: StationEvent
     weight: 3
     duration: null
-    earliestStart: 30
-    minimumPlayers: 30
+    earliestStart: 45
+    minimumPlayers: 25
     chaos:
       Hostile: 40
       Combat: 40
@@ -534,7 +533,7 @@
   - type: GameRule
     chaosScore: 100
   - type: VentCrittersRule # like a chimney
-    max: 1
+    max: 3
     table:
       id: SantaClaus
 
@@ -552,8 +551,8 @@
     startAnnouncement: null
     weight: 1
     duration: null
-    earliestStart: 30
-    minimumPlayers: 30
+    earliestStart: 15
+    minimumPlayers: 10
     chaos:
       Hostile: 40
       Combat: 40

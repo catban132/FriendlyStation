@@ -30,12 +30,12 @@
   id: DerelictCyborgSyndicateSpawn
   components:
   - type: GameRule
-    chaosScore: 150
+    chaosScore: 100
   - type: StationEvent
     weight: 4.5 # Uncommon
-    earliestStart: 30
-    reoccurrenceDelay: 30
-    minimumPlayers: 4
+    earliestStart: 0
+    reoccurrenceDelay: 1
+    minimumPlayers: 0
     duration: null
   - type: SpaceSpawnRule
     spawnDistance: 0
@@ -54,7 +54,7 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-job-distribution-error-announcement
-    minimumPlayers: 25
+    minimumPlayers: 0
     weight: 3
     duration: 1
   - type: GameRule
