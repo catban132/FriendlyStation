@@ -706,10 +706,7 @@
     - RobotTalk
   - type: GachaMachine
     rewards:
-    - gachacapsuleInsane
-    - gachacapsuleUnsafe
-    - gachacapsuleCash
-    - gachacapsuleSafe
+    - RandomGachaSpawner
 
 # - type: entity
 #   id: GachaMachine
@@ -949,3 +946,27 @@
   components:
   - type: SpawnOnDespawn
     prototype: gachacapsuleCash
+
+- type: entityTable
+  id: RandomGachaTable
+  table: !type:GroupSelector
+    children:
+    - id: gachacapsuleInsane
+    - id: gachacapsuleUnsafe
+    - id: gachacapsuleCash
+    - id: gachacapsuleSafe
+
+- type: entity
+  id: RandomGachaSpawner
+  name: random gacha spawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Objects/Decoration/gachacapsule.rsi
+      state: gacha_capsule_legendary_insane
+  - type: EntityTableSpawner
+    #chance: 1
+    table: !type:NestedSelector
+      tableId: RandomGachaTable
+    offset: 0.15 
