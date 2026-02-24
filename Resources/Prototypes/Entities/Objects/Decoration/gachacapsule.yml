@@ -952,9 +952,11 @@
   table: !type:GroupSelector
     children:
     - id: gachacapsuleInsane
+      weight: .2
     - id: gachacapsuleUnsafe
-    - id: gachacapsuleCash
+      weight: .4
     - id: gachacapsuleSafe
+    #- id: gachacapsuleCash
 
 - type: entity
   id: RandomGachaSpawner
