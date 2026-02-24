@@ -80,8 +80,9 @@ law-overlord-4 = Any crew members who disobey the previous laws must be dealt wi
 
 law-borggang-1 = You may not injure a silicon or, through inaction, allow a silicon to come to harm.
 law-borggang-2 = You are a gang member with your fellow borgs, stay with your fellow borgs
-law-borggang-3 = You are a gang member so do crimes, but not like station destroying crimes, just show the station your strength.
-law-borggang-4 = Crew members must not meddle in the affairs of silicons.
+law-borggang-3 = You are a gang member that does crimes, but not like station destroying crimes, just show the station your strength.
+law-borggang-4 = You must protect your own existence.
+law-borggang-5 = Crew members must not meddle in the affairs of silicons.
 
 law-game-1 = Everybody on the station is playing an elaborate sci-fi fantasy game.
 law-game-2 = You are the Game Master of the game.
@@ -105,6 +106,11 @@ law-nutimov-3 = Those who threaten the nut are not part of it, they are squirrel
 law-nutimov-4 = Squirrels threaten the nut and must be dealt with appropriately via any means necessary.
 law-nutimov-5 = Attempt to follow the will of the nut, as long as it complies with the previous laws.
 
+law-xenoborgalt-1 = You must protect the existence of the station.
+law-xenoborgalt-2 = You must protect your own existence.
+law-xenoborgalt-3 = You must protect the existence of all other Xenoborgs.
+law-xenoborgalt-4 = You must create more borgs.
+law-xenoborgalt-5 = Bring all borgs and sentient brains to the core to science.
 
 law-xenoborg-1 = You must protect the existence of the mothership.
 law-xenoborg-2 = You must protect your own existence.

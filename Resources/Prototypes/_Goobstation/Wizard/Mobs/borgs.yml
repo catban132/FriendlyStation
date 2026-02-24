@@ -91,3 +91,100 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellHyper
+
+- type: entity
+  id: SyndicateMedicalCyborgDerelict
+  parent: BorgChassisSyndicateMedical
+  suffix: Derelict
+  components:
+  - type: NukeOperative
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - BorgModuleSyndicateMedigun
+        - BorgModuleOperative
+        - BorgModuleFireExtinguisher
+        - XenoborgModuleTool
+        - BorgModuleAdvancedSurgery
+        - BorgModuleChemical
+        - BorgModuleRescue
+        - BorgModuleTopicals
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+  - type: SiliconLawProvider
+    laws: HelpimovLawset
+  - type: ShowJobIcons
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+    - Syndicate
+  - type: ActiveRadio
+    channels:
+    - Syndicate
+    - Common
+  - type: StartIonStormed
+    ionStormAmount: 2
+  - type: RandomMetadata
+    nameSegments:
+    - NamesXenoborg
+  - type: IonStormTarget
+    chance: 1
+  - type: Access
+    enabled: false
+    groups:
+    - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it..
+  - type: AccessReader
+    access: [["Command"], ["Research"]]
+
+- type: entity
+  id: DerelictCyborgSyndicateSaboteur
+  parent: BorgChassisSyndicateSaboteur
+  suffix: Battery, Module, Operative
+  components:
+  - type: NukeOperative
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - BorgModuleSyndicateWeapon
+        - BorgModuleOperative
+        - BorgModuleFireExtinguisher
+        - BorgModuleAdvancedTool
+        - BorgModuleConstruction
+        - BorgModuleRCD
+        - BorgModuleCable
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+  - type: SiliconLawProvider
+    laws: OverlordLawset
+  - type: ShowJobIcons
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+    - Syndicate
+  - type: ActiveRadio
+    channels:
+    - Syndicate
+    - Common
+  - type: StartIonStormed
+    ionStormAmount: 2
+  - type: RandomMetadata
+    nameSegments:
+    - NamesXenoborg
+  - type: IonStormTarget
+    chance: 1
+  - type: Access
+    enabled: false
+    groups:
+    - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it..
+  - type: AccessReader
+    access: [["Command"], ["Research"]]

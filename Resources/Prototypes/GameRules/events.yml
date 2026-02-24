@@ -176,6 +176,12 @@
     # - id: TidemindDevelop #Goobstation - Tidemind #Theres usually only one tider on lowpop, doesnt do anything
     - id: MothroachSpawn # DeltaV
     - id: DerelictCyborgSyndicateSpawn # Goobstation - usually calm
+    - id: DerelictXenoborgStealthSpawn # i'll reduce this into one gamerule eventually
+    - id: DerelictXenoborgEngiSpawn
+    - id: DerelictXenoborgScoutSpawn
+    - id: DerelictXenoborgHeavySpawn
+    - id: DerelictSyndicateMedicalCyborgSpawn
+    - id: DerelictSyndicateSaboteurCyborgSpawn
     - id: MalignRiftSpawn # DeltaV
     - id: FloorGoblinMidRound # Goobstation
     - id: ClownGoblinMigration # Goobstation - New Midrounds
@@ -892,9 +898,9 @@
   components:
   - type: StationEvent
     earliestStart: 10
-    weight: 8
+    weight: 10
     minimumPlayers: 0
-    maxOccurrences: 1 # can only happen once per round
+    maxOccurrences: 3 # can only happen once per round
     startAnnouncement: station-event-communication-interception
     startAudio:
       path: /Audio/Announcements/intercept.ogg
@@ -908,8 +914,8 @@
     definitions:
     - prefRoles: [ TraitorSleeper ]
       fallbackRoles: [ Traitor ]
-      min: 1
-      max: 3
+      min: 2
+      max: 4
       playerRatio: 10
       chaosScore: 200 # Goobstation - same as roundstart traitor gamerule
       blacklist:
@@ -1026,7 +1032,7 @@
   - type: StationEvent
     weight: 7
     earliestStart: 10
-    reoccurrenceDelay: 1
+    reoccurrenceDelay: 0
     minimumPlayers: 0
     duration: null
     chaos: # Goobstation

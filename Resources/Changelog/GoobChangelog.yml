@@ -21262,3 +21262,9 @@ Entries:
         to oversee
   id: 2414
   time: '2026-02-15T13:43:41.0000000+00:00'
+- author: Catban
+  changes:
+    - type: Add
+      message: Added derelict xenoborgs and added more derelict syndicate cyborgs
+  id: 2415
+  time: '2026-02-23T23:43:33.0000000+00:00'

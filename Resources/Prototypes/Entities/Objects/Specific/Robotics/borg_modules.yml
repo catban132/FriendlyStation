@@ -1185,6 +1185,24 @@
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-operative-module }
 
 - type: entity
+  id: BorgModuleSyndicateMedigun
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  name: Medigun cyborg module
+  description: A module that comes with a medical beam gun, and an energy dagger. # Goobstation
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      moduleId: Operative
+      items:
+      - EnergyDaggerLoud
+      - MedicalBeamGunSyndicate
+    - type: BorgModuleIcon
+      icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-esword-module }
+
+- type: entity
   id: BorgModuleEsword
   parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
   name: energy sword cyborg module
@@ -1556,6 +1574,24 @@
     moduleId: XenoborgHypo
     items:
     - NocturineHypo
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-hypo-module }
+
+- type: entity
+  parent: [ BaseXenoborgModuleStealth, BaseProviderBorgModule, BaseXenoborgContraband ]
+  id: XenoborgModuleHypo&Chameleon
+  name: nocturine hypo & chameleon xenoborg module
+  description: Module with a self-refilling nocturine hypo.
+  components:
+  - type: Sprite
+    layers:
+    - state: xenoborg_stealth
+    - state: icon-xenoborg-hypo
+  - type: ItemBorgModule
+    moduleId: XenoborgHypo&Chameleon
+    items:
+    - NocturineHypo
+    - ChameleonProjector
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-hypo-module }
 

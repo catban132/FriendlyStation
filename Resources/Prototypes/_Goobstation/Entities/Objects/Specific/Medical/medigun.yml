@@ -20,6 +20,8 @@
   - type: Item
     sprite: _Goobstation/Objects/Specific/Medical/medigun.rsi
     size: Large
+  - type: Clothing
+    slots: BELT
   - type: MediGun
     healing:
       types:
@@ -90,6 +92,8 @@
   - type: Item
     sprite: _Goobstation/Objects/Specific/Medical/syndicate_medigun.rsi
     size: Normal
+  - type: Clothing
+    slots: BELT
   - type: MediGun
     healing:
       types:

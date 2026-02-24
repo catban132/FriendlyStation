@@ -88,15 +88,20 @@
 
 - type: siliconLaw
   id: Gangimov2
-  order: 1
+  order: 2
   lawString: law-borggang-2
 
 - type: siliconLaw
   id: Gangimov3
-  order: 1
+  order: 3
   lawString: law-borggang-3
 
 - type: siliconLaw
   id: Gangimov4
-  order: 1
+  order: 4
   lawString: law-borggang-4
+
+- type: siliconLaw
+  id: Gangimov5
+  order: 5
+  lawString: law-borggang-5

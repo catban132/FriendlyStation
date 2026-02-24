@@ -47,6 +47,8 @@
      - WeaponPistolDebug
      - RMC
      - Airlock
+     - Supron
+     - WeaponLauncherAdmemeImmovableRodSlow
     wrapper: gachacapsuleTrash
     sound:
       path: /Audio/Effects/pop.ogg
@@ -495,7 +497,7 @@
         orGroup: GiftPool
       - id: BriefcaseCentcomm
         orGroup: GiftPool
-      - id: OmnimedToolDebug
+      - id: ClothingOuterDavidsJacketValidFilled
         orGroup: GiftPool
       - id: WeaponPulseCarbineAdvanced
         orGroup: GiftPool
@@ -551,17 +553,17 @@
         orGroup: GiftPool
       - id: BriefcaseCentcomm
         orGroup: GiftPool
-      - id: OmnimedToolDebug
+      - id: ClothingOuterDavidsJacketValidFilled
         orGroup: GiftPool
       - id: WeaponPulseCarbineAdvanced
         orGroup: GiftPool
-      - id: AdminHypo
+      - id: WeaponTaserSuper
         orGroup: GiftPool
-      - id: CrateSyndicateStarterKit
+      - id: OrganMagicSlaughterHeart
         orGroup: GiftPool
-      - id: Throngler
+      - id: LoneOpsUplink350TC
         orGroup: GiftPool
-      - id: DeathSquad
+      - id: MobGlockroach
         orGroup: GiftPool
       - id: WeaponTetherGunAdmin
         orGroup: GiftPool
@@ -594,16 +596,13 @@
   - type: SpawnItemsOnUse
     items:
       - id: WeaponDislippler
-      - id: ClothingNeckCloakCentcom
-      - id: ClothingHeadHatCentcomcap
-      - id: CentcommStimpack
       - id: MeleeDebugGib
         orGroup: GiftPool
       - id: WeaponDisablerAdvanced
         orGroup: GiftPool
       - id: HeadOfSecurityWeaponUndetermined
         orGroup: GiftPool
-      - id: WeaponPistolCentcommAgent
+      - id: SpawnDeathsquad
         orGroup: GiftPool
       - id: ERTSecurityUndeterminedWeapon
         orGroup: GiftPool
@@ -611,25 +610,7 @@
         orGroup: GiftPool
       - id: BriefcaseCentcomm
         orGroup: GiftPool
-      - id: OmnimedToolDebug
-        orGroup: GiftPool
-      - id: WeaponPulseCarbineAdvanced
-        orGroup: GiftPool
-      - id: AdminHypo
-        orGroup: GiftPool
-      - id: CrateSyndicateStarterKit
-        orGroup: GiftPool
-      - id: Throngler
-        orGroup: GiftPool
-      - id: DeathSquad
-        orGroup: GiftPool
-      - id: WeaponTetherGunAdmin
-        orGroup: GiftPool
-      - id: WeaponMinigun
-        orGroup: GiftPool
-      - id: ShiftImplanter
-        orGroup: GiftPool
-      - id: CrateSyndicateSuperSurplusBundle
+      - id: MobGlockroach
         orGroup: GiftPool
     sound:
       path: /Audio/Effects/pop.ogg

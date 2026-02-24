@@ -48,7 +48,7 @@
   components:
   - type: ChangelingRule
   - type: GameRule
-    minPlayers: 15
+    minPlayers: 30
   - type: AntagRandomObjectives
     sets:
     - groups: ChangelingObjectiveGroups
@@ -87,12 +87,12 @@
   - type: AntagRandomObjectives
     sets:
     - groups: CorporateObjectiveGroups
-    maxDifficulty: 8 # Very rare antag so they should get a lot of objectives
+    maxDifficulty: 5 # Very rare antag so they should get a lot of objectives
   - type: GameRule
-    minPlayers: 30
+    minPlayers: 0
     delay:
-      min: 465
-      max: 665 # Delay is so the heads help their department get set up.
+      min: 150
+      max: 425 # Delay is so the heads help their department get set up.
   - type: AntagSelection
     definitions:
     - prefRoles: [ Traitor ]
