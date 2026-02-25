@@ -27,6 +27,9 @@ public sealed partial class GachaMachineComponent : Component
     public float WinChance = 1f;
 
     [DataField, AutoNetworkedField]
+    public int SpinCost = 250;
+
+    [DataField, AutoNetworkedField]
     public bool IsSpinning;
 
     [DataField, AutoNetworkedField]

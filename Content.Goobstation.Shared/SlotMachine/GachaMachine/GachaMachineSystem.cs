@@ -26,6 +26,8 @@ public sealed class GachaMachineSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _power = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly ItemSlotsSystem _itemSlots = default!;
+    [Dependency] private readonly SharedStackSystem _stackSystem = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -50,6 +52,15 @@ public sealed class GachaMachineSystem : EntitySystem
         if (comp.IsSpinning || !_power.IsPowered(uid))
             return;
 
+        if (!_itemSlots.TryGetSlot(uid, "money", out var slot)
+            || slot.Item == null
+            || !TryComp<StackComponent>(slot.Item.Value, out var stack)
+            || stack.Count < comp.SpinCost)
+        {
+            _popupSystem.PopupPredicted(Loc.GetString("slotmachine-no-money"), uid, uid, PopupType.Small); // No Money
+            return;
+        }
+
         var doAfter =
          new DoAfterArgs(EntityManager, args.User, comp.DoAfterTime, new GachaMachineDoAfterEvent(), uid)
          {
@@ -57,6 +68,8 @@ public sealed class GachaMachineSystem : EntitySystem
              BreakOnDamage = true,
              MultiplyDelay = false,
          };
+        _stackSystem.SetCount(stack.Owner, stack.Count - comp.SpinCost, stack);
+        Dirty(stack.Owner, stack);
         comp.IsSpinning = true;
 
         if (_net.IsServer)
