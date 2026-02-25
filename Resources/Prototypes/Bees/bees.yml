@@ -14,7 +14,7 @@
     state: omnitool-screwing
   - type: Item
     sprite: Objects/Tools/omnitool.rsi
-    size: Small
+    size: Normal
   - type: Tag
     tags:
     - Multitool
@@ -33,39 +33,39 @@
     entries:
       - behavior: Screwing
         sprite:
-          sprite: Objects/Tools/omnitool.rsi
-          state: omnitool-screwing
+          sprite: Objects/Tools/screwdriver.rsi
+          state: honeyscrewdriver
         useSound:
           path: /Audio/Items/drill_use.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
       - behavior: Prying
         sprite:
-          sprite: Objects/Tools/omnitool.rsi
-          state: omnitool-prying
+          sprite: Objects/Tools/crowbar.rsi
+          state: honeycrowbar
         useSound:
           path: /Audio/Items/jaws_pry.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
       - behavior: Anchoring
         sprite:
-          sprite: Objects/Tools/omnitool.rsi
-          state: omnitool-wrenching
+          sprite: Objects/Tools/wrench.rsi
+          state: Honeywrench
         useSound:
           path: /Audio/Items/ratchet.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
       - behavior: Cutting
         sprite:
-          sprite: Objects/Tools/omnitool.rsi
-          state: omnitool-snipping
+          sprite: Objects/Tools/wirecutters.rsi
+          state: honeywirecutters
         useSound:
           path: /Audio/Items/jaws_cut.ogg
         changeSound:
           path: /Audio/Items/change_drill.ogg
       - behavior: Pulsing
         sprite:
-          sprite: Objects/Tools/omnitool.rsi
-          state: omnitool-pulsing
+          sprite: Objects/Tools/multitool.rsi
+          state: honeymultitool
         changeSound:
           path: /Audio/Items/change_drill.ogg
