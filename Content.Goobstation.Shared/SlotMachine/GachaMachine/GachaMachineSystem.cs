@@ -31,7 +31,6 @@ public sealed class GachaMachineSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-
         SubscribeLocalEvent<GachaMachineComponent, ActivateInWorldEvent>(OnInteractHandEvent);
         SubscribeLocalEvent<GachaMachineComponent, GachaMachineDoAfterEvent>(OnSlotMachineDoAfter);
         SubscribeLocalEvent<GachaMachineComponent, GotEmaggedEvent>(OnEmagged);

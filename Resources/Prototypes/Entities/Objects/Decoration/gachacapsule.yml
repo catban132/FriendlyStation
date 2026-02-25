@@ -688,13 +688,13 @@
     defaultChannel: Binary
     channels:
     - Binary
-  - type: Vocalizer
-    minVocalizeInterval: 8m
-    maxVocalizeInterval: 10m
-    hideChat: true
-  - type: VocalizerRequiresPower
-  - type: DatasetVocalizer
-    dataset: SlotMachineAds
+  #- type: Vocalizer
+  #  minVocalizeInterval: 8m
+  #  maxVocalizeInterval: 10m
+  #  hideChat: true
+  #- type: VocalizerRequiresPower
+  #- type: DatasetVocalizer
+  #  dataset: SlotMachineAds
   - type: LanguageSpeaker # Einstein Engines - Languages
   - type: LanguageKnowledge # Einstein Engines - Languages
     speaks:
