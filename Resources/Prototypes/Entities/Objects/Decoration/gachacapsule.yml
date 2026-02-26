@@ -628,7 +628,7 @@
   - type: Sprite
     sprite: _Goobstation/Structures/Machines/slotmachines/claw_machine.rsi
     layers:
-    - state: clawmachine
+    - state: gachamachine
   - type: WiresPanel
   - type: WiresVisuals
   - type: Wires
